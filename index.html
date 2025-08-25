@@ -5,15 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Video - Sagar Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sagar Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+        .header {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Background Video */
+        .video_back {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .heading {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            top: 30%;
+        }
+
+        .heading h1 {
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+            font-size: 80px;
+            font-weight: 100;
+        }
+
+        .heading span {
+            color: #ff7f50;
+        }
+
+        .heading a {
+            font-size: 20px;
+            color: #fff;
+            margin: 8px;
+            padding: 6px 20px;
+            border: 1px solid #ff7f50;
+            text-decoration: none;
+            border-radius: 28px;
+            transition: 0.5s;
+        }
+
+        .heading a:hover {
+            background: #ff7f50;
+            color: #222;
+        }
+
+        @media screen and (max-width: 768px) {
+            .heading h1 {
+                font-size: 50px;
+            }
+
+            .heading a {
+                font-size: 16px;
+                padding: 5px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <section class="header">
-        <video class="video_back" autoplay loop>
+        <!-- Background Video -->
+        <video class="video_back" autoplay loop muted>
             <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
+
+        <!-- Heading and Buttons -->
         <div class="heading">
             <h1>Sagar <span>Developer</span></h1>
             <a href="#">Subscribe</a>
@@ -23,5 +104,5 @@
     </section>
 </body>
 
-
 </html>
+
